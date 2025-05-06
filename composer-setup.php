@@ -13,6 +13,7 @@
 setupEnvironment();
 process(is_array($argv) ? $argv : array());
 
+
 /**
  * Initializes various values
  *
