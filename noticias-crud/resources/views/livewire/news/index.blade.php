@@ -52,8 +52,8 @@
                                             <a href="{{ route('news.edit', $news->id) }}" class="text-green-600 hover:text-green-900 mr-2">Editar</a>
                                         </div>
                                         <button 
-                                            wire:click="delete({{ $news->id }})" 
-                                            onclick="return confirm('Tem certeza que deseja excluir esta notícia?')" 
+                                            x-data=""
+                                            x-on:click.prevent="$wire.delete({{ $news->id }}, confirm('Tem certeza que deseja excluir esta notícia?'))" 
                                             class="text-red-600 hover:text-red-900">
                                             Excluir
                                         </button>

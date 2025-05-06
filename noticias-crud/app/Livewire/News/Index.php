@@ -20,8 +20,12 @@ class Index extends Component
         $this->resetPage();
     }
     
-    public function delete($id)
+    public function delete($id, $confirmed = false)
     {
+        if (!$confirmed) {
+            return;
+        }
+        
         $news = News::find($id);
         
         if ($news) {
