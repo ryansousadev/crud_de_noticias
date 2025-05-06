@@ -55,6 +55,7 @@ class Edit extends Component
             'title' => $this->title,
             'content' => $this->content,
             'image' => $imagePath,
+            'updated_at' => now(),
         ]);
         
         session()->flash('message', 'Notícia atualizada com sucesso!');
