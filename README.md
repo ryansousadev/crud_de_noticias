@@ -9,59 +9,59 @@ ________________________________________________________________________________
 
 Passo a passo para instalação
 
-1. Clone o repositório --------------
+1. Clone o repositório
 
 git clone [url-do-repositorio] noticias-crud
 
 cd noticias-crud
 
-2. Instale as dependências do PHP --------------
+2. Instale as dependências do PHP
 
 composer install
 
-3. Configure o ambiente --------------
+3. Configure o ambiente
 
 cp .env.example .env
 php artisan key:generate
 
-4. Configure o banco de dados SQLite --------------
+4. Configure o banco de dados SQLite
 
 touch database/database.sqlite
 
-5. Configure o arquivo .env --------------
+5. Configure o arquivo .env
 
 DB_CONNECTION=sqlite
 DB_DATABASE=/caminho/absoluto/para/database/database.sqlite
 
-6. Execute as migrações para criar as tabelas --------------
+6. Execute as migrações para criar as tabelas 
 
 php artisan migrate
 
-7. (Opcional) Execute os seeders para popular o banco com dados de exemplo --------------
+7. (Opcional) Execute os seeders para popular o banco com dados de exemplo
 
 php artisan db:seed
 
-8. Crie o link simbólico para o armazenamento de arquivos --------------
+8. Crie o link simbólico para o armazenamento de arquivos 
 
 php artisan storage:link
 
-9. Configure o fuso horário (se necessário) --------------
+9. Configure o fuso horário (se necessário) 
 No arquivo config/app.php, altere o valor de timezone para America/Sao_Paulo.
 
 
-10. Limpe o cache de configuração --------------
+10. Limpe o cache de configuração 
 
 php artisan config:clear
 php artisan optimize:clear
 
 
 
-11. Inicie o servidor de desenvolvimento --------------
+11. Inicie o servidor de desenvolvimento 
 
 php artisan serve
 
 
-12. Acesse o CRUD --------------
+12. Acesse o CRUD 
 
 Abra o navegador e acesse http://127.0.0.1:8000/news
 
