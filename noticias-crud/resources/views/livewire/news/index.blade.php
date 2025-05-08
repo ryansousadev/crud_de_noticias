@@ -28,7 +28,7 @@
             @if($newsList->currentPage() == 1)
                 <div class="lg:col-span-2">
                     @php $featuredNews = $newsList->first(); @endphp
-                    <div class="bg-white rounded shadow-sm overflow-hidden h-full border-b-2 border-red-700">
+                    <div class="bg-white rounded shadow-sm overflow-hidden h-full border-b-2 border-red-700 "style="height:50%;">
                         @if ($featuredNews->image)
                             <img src="{{ Storage::url($featuredNews->image) }}" alt="{{ $featuredNews->title }}" class="w-full h-64 object-cover">
                         @else
